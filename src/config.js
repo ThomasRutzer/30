@@ -1,0 +1,1 @@
+export const ARRIVED_THRESHOLD = 50

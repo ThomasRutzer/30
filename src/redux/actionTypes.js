@@ -1,0 +1,5 @@
+export const SET_ARRIVED = "SET_ARRIVED"
+export const SET_STARTED = "SET_STARTED"
+export const SET_COORDINATES = "SET_COORDINATES"
+export const SET_CURRENT_VIEW = "SET_CURRENT_VIEW"
+export const SET_CLIPBOARD = "SET_CLIPBOARD"

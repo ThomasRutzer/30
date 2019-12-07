@@ -1,0 +1,41 @@
+body {
+  --white: #fff;
+  --font: #333;
+  --primary: rgb(117, 80, 250);
+
+  color: var(--font);
+  font-family: 'Concert One', sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.view {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+button {
+  border-radius: 8px;
+  background-color: var(--primary);
+  border: none;
+  padding: 6px 12px 12px 12px;
+  color: var(--white);
+  font-family: inherit;
+  font-size: inherit;
+  min-width: 100px;
+  box-sizing: border-box; 
+  min-height: 40px;
+}
+
+#confettis {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
