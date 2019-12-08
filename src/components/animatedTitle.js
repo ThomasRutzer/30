@@ -3,12 +3,12 @@ import anime from "animejs"
 import Splitting from 'splitting'
 
 class AnimatedTitle extends LitElement {
-  
   static get styles() {
     return css`
       h1 {
         font-size: 48px;
         margin-top: 0;
+        color: var(--primary);
       }
 
       h1 .word {
