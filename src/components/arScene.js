@@ -25,6 +25,8 @@ class ArScene extends LitElement {
         </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
+      <note-component>Scan den Marker!</note-component>
+
     `
   }
 }
