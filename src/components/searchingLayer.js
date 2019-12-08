@@ -5,7 +5,7 @@ import { actions } from "../redux"
 import { PAGES } from "../pages"
 import { ARRIVED_THRESHOLD } from "../config"
 import Geolocation from "../geolocation/geolocation"
-import "./clipboardNote"
+import "./noteComponent"
 
 class SearchingLayer extends connect(store)(LitElement) {
   static get properties() {
@@ -16,6 +16,10 @@ class SearchingLayer extends connect(store)(LitElement) {
       currentDistance: { type: Number },
       inClipboard: { type: Boolean }
     }
+  }
+
+  constructor() {
+    super()
   }
 
   stateChanged(state) {
@@ -29,26 +33,7 @@ class SearchingLayer extends connect(store)(LitElement) {
     }
   }
 
-  constructor() {
-    super()
-  }
-  
-  render() {
-    return html`${ this.currentDistance 
-      ? html`<animated-title>Das Ziel ist noch ${this.currentDistance}m entfernt‚</animated-title>` 
-      : null 
-    }
-      ${this.inClipboard ? html`<clipboard-note></clipboard-note>` : null}
-    `
-  }
-
-
-
   createRenderRoot() {
-    /**
-     * Render template without shadow DOM. Note that shadow DOM features like 
-     * encapsulated CSS and slots are unavailable.
-     */
     return this
   }
   
@@ -60,6 +45,15 @@ class SearchingLayer extends connect(store)(LitElement) {
     } else {
       this.currentDistance = newDistance
     }
+  }
+  
+  render() {
+    return html`${ this.currentDistance 
+      ? html`<animated-title>Das Ziel ist noch ${this.currentDistance}m entfernt‚</animated-title>` 
+      : null 
+    }
+      ${this.inClipboard ? html`<note-component>Koordinaten in der Zwischenablage!</note-component>` : null}
+    `
   }
 }
 

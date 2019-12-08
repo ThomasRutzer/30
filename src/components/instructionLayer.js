@@ -14,6 +14,10 @@ class InstructionLayer extends connect(store)(LitElement) {
     }
   }
 
+  constructor() {
+    super()
+  }
+
   stateChanged(state) {
     this.lat = state.coordinates.lat
     this.long = state.coordinates.long
@@ -35,22 +39,7 @@ class InstructionLayer extends connect(store)(LitElement) {
     })
   }
 
-  constructor() {
-    super()
-  }
-  
-  render() {
-    return html`
-      <animated-title>Gehe zur Position lat=${this.lat},&nbsp;long=${this.long}</animated-title>
-      <button class="cta" @click="${this.handleClick}">Verstanden!</button>
-    `
-  }
-
   createRenderRoot() {
-    /**
-     * Render template without shadow DOM. Note that shadow DOM features like 
-     * encapsulated CSS and slots are unavailable.
-     */
     return this
   }
 
@@ -58,6 +47,13 @@ class InstructionLayer extends connect(store)(LitElement) {
     store.dispatch(updateCurrentView(PAGES.SEARCHING))
     await navigator.clipboard.writeText(`${this.lat}, ${this.long}`)
     store.dispatch(setClipboard())
+  }
+  
+  render() {
+    return html`
+      <animated-title>Gehe zur Position lat=${this.lat},&nbsp;long=${this.long}</animated-title>
+      <button class="cta" @click="${this.handleClick}">Los gehts!</button>
+    `
   }
 }
 
