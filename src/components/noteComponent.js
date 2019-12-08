@@ -1,7 +1,7 @@
 import { LitElement, css,html } from 'lit-element'
 import anime from "animejs"
 
-class ClipboardNote extends LitElement {
+class Note extends LitElement {
   static get styles() {
     return css`
       .note {
@@ -10,10 +10,9 @@ class ClipboardNote extends LitElement {
         left: 50%;
         transform: translateX(-50%);
         border-radius: 8px;
-        background-color: var(--font);
+        background-color: var(--secondary);
         padding: 6px 12px 12px 12px;
         color: var(--white);
-        min-width: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -26,7 +25,7 @@ class ClipboardNote extends LitElement {
   }
   
   render() {
-    return html`<p class="note">Koordinaten in der Zwischenablage!</p>`
+    return html`<p class="note">${this.textContent}</p>`
   }
 
   firstUpdated() {
@@ -46,4 +45,4 @@ class ClipboardNote extends LitElement {
   }
 }
 
-customElements.define('clipboard-note', ClipboardNote)
+customElements.define('note-component', Note)
