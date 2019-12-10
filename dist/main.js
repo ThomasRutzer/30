@@ -205,6 +205,7 @@ var he=n(0),pe=function(){return Math.random().toString(36).substring(7).split("
         display: flex;
         align-items: center;
         justify-content: center;
+        white-space: nowrap;
       }
     `}constructor(){super()}render(){return U`<p class="note">${this.textContent}</p>`}firstUpdated(){super.firstUpdated();const e=this.shadowRoot.querySelector(".note");Rt({targets:e,translateY:[40,0],translateX:"-50%",opacity:[0,1],easing:"easeOutExpo",duration:1200,delay:(e,t)=>500+30*t})}});class Ft extends(de(xe)(le)){static get properties(){return{lat:{type:Number},long:{type:Number},distanceWatching:{type:Boolean},currentDistance:{type:Number},inClipboard:{type:Boolean}}}constructor(){super()}stateChanged(e){this.lat=e.coordinates.lat,this.long=e.coordinates.long,this.inClipboard=e.wroteToClipboard,this.distanceWatching||(this.distanceWatching=!0,Dt.intersect(this.lat,this.long,this.handlePositionChange.bind(this)))}createRenderRoot(){return this}handlePositionChange(e){e<=zt?(Dt.clear(),this.distanceWatching=!1,xe.dispatch(r.updateCurrentView(we.ARRIVED))):this.currentDistance=e}render(){return U`${this.currentDistance?U`<animated-title>Das Ziel ist noch ${this.currentDistance}m entfernt 🏁</animated-title>`:U`<animated-title>Das funktioniert nur mit aktivierter GPS-Verbindung 😏</animated-title>`}
       ${this.inClipboard?U`<note-component>Koordinaten sind in der Zwischenablage!</note-component>`:null}
