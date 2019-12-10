@@ -3,6 +3,7 @@ body {
   --font: #333;
   --secondary: #d5430b;
   --primary: #5d48a4;
+  --info: #FED13B;
 
   color: var(--font);
   font-family: 'Concert One', sans-serif;

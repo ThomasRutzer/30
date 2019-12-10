@@ -10,7 +10,7 @@ class Note extends LitElement {
         left: 50%;
         transform: translateX(-50%);
         border-radius: 8px;
-        background-color: var(--secondary);
+        background-color: var(--info);
         padding: 6px 12px 12px 12px;
         color: var(--white);
         display: flex;
