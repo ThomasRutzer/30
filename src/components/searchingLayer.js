@@ -52,7 +52,7 @@ class SearchingLayer extends connect(store)(LitElement) {
       ? html`<animated-title>Das Ziel ist noch ${this.currentDistance}m entfernt 🏁</animated-title>` 
       : html`<animated-title>Das funktioniert nur mit aktivierter GPS-Verbindung 😏</animated-title>` 
     }
-      ${this.inClipboard ? html`<note-component>Koordinaten in der Zwischenablage!</note-component>` : null}
+      ${this.inClipboard ? html`<note-component>Koordinaten sind in der Zwischenablage!</note-component>` : null}
     `
   }
 }
