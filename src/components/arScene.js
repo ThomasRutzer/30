@@ -20,13 +20,12 @@ class ArScene extends LitElement {
         <a-assets>
           <a-asset-item id="eiffel" src="assets/eiffel_tower.gltf">
         </a-assets>
-        <a-marker preset="hiro">
+        <a-marker type="pattern" "assets/marker.patt">
           <a-gltf-model scale="0.005 0.005 0.005" src="#eiffel"></a-gltf-model>
         </a-marker>
         <a-entity camera></a-entity>
       </a-scene>
       <note-component>Scan den Marker!</note-component>
-
     `
   }
 }
