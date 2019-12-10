@@ -50,7 +50,7 @@ class SearchingLayer extends connect(store)(LitElement) {
   render() {
     return html`${ this.currentDistance 
       ? html`<animated-title>Das Ziel ist noch ${this.currentDistance}m entfernt 🏁</animated-title>` 
-      : html`<animated-title>Die Entfernung wird zu deinem Ziel wird ermittelt. Das funktioniert nur mit GPS-Verbindung 😏</animated-title>` 
+      : html`<animated-title>Das funktioniert nur mit aktiviertert GPS-Verbindung 😏</animated-title>` 
     }
       ${this.inClipboard ? html`<note-component>Koordinaten in der Zwischenablage!</note-component>` : null}
     `
