@@ -27,13 +27,14 @@ class IntroSteps extends connect(store)(LitElement) {
   firstUpdated() {
     super.firstUpdated()
 
-    const primaryColor = getCSSCustomProp('--primary', document.body)
-    const secondaryColor = getCSSCustomProp('--secondary', document.body)
+    const primaryColor = getCSSCustomProp("--primary", document.body)
+    const secondaryColor = getCSSCustomProp("--secondary", document.body)
+    const infoColor = getCSSCustomProp("--info", document.body)
 
     this.confetti = new ConfettiGenerator({ 
       target: 'confettis', 
       clock: 15, 
-      colors: [hexToRGB(primaryColor), hexToRGB(secondaryColor)]
+      colors: [hexToRGB(primaryColor), hexToRGB(secondaryColor), hexToRGB(infoColor)]
     })
     this.confetti.render()
   }
