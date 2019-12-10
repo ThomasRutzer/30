@@ -6,7 +6,7 @@ class AnimatedTitle extends LitElement {
   static get styles() {
     return css`
       h1 {
-        font-size: 48px;
+        font-size: 42px;
         margin-top: 0;
         color: var(--primary);
       }
