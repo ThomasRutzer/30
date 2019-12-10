@@ -31,7 +31,7 @@ class InstructionLayer extends connect(store)(LitElement) {
     anime({
       targets: cta,
       translateY: [40,0],
-      translateX: ["50%", 0],
+      translateX: "-50%",
       opacity: [0,1],
       easing: "easeOutExpo",
       duration: 700,
