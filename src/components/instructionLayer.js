@@ -51,7 +51,7 @@ class InstructionLayer extends connect(store)(LitElement) {
   
   render() {
     return html`
-      <animated-title>Gehe zur Position lat=${this.lat},&nbsp;long=${this.long}</animated-title>
+      <animated-title>Gehe zur Position lat=${this.lat},&nbsp;long=${this.long} 🔎🗺️</animated-title>
       <button class="cta" @click="${this.handleClick}">Los gehts!</button>
     `
   }
