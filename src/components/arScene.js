@@ -16,11 +16,14 @@ class ArScene extends LitElement {
   
   render() {
     return html`
-      <a-scene inspector" embedded  vr-mode-ui="enabled: false">
+      <a-scene inspector" 
+        embedded  
+        arjs="debugUIEnabled: false" 
+        vr-mode-ui="enabled: false">
         <a-assets>
           <a-asset-item id="eiffel" src="assets/eiffel_tower.gltf">
         </a-assets>
-        <a-marker type="pattern" "assets/marker.patt">
+        <a-marker type="pattern" url="assets/marker.patt">
           <a-gltf-model scale="0.005 0.005 0.005" src="#eiffel"></a-gltf-model>
         </a-marker>
         <a-entity camera></a-entity>
