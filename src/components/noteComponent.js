@@ -6,7 +6,7 @@ class Note extends LitElement {
     return css`
       .note {
         position: absolute;
-        bottom: 24px;
+        bottom: 48px;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 8px;
