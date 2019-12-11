@@ -7,6 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
   </head>
   <body style='margin : 0px; overflow: hidden;'>
+    <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+    
+function showPosition(position) {
+    x.innerHTML="ohneLatitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+}
+</script>
     <app-start></app-start>
   </body>
 </html>
