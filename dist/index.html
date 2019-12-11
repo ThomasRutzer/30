@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
   <script type="text/javascript" src="main.js"></script></head>
   <body style='margin : 0px; overflow: hidden;'>
-    <p>Click the button to get your coordinates.</p>
 
 <button onclick="getLocation()">Try It</button>
 
-<p id="demo"></p>
+<p style="position: fixed; top: 0;" id="demo"></p>
 
 <script>
 var x = document.getElementById("demo");
@@ -29,5 +28,6 @@ function showPosition(position) {
     "<br>Longitude: " + position.coords.longitude;
 }
 </script>
+<app-start></app-start>
   </body>
 </html>
