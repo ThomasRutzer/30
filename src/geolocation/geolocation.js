@@ -7,7 +7,7 @@ class Geolocation {
     watchID = navigator.geolocation.watchPosition((position) => {
       const distance = getDistance(lat, long, position.coords.latitude, position.coords.longitude)
       cb(distance)
-    })
+    }, null, { enableHighAccuracy: true})
   }
 
   static clear() {
