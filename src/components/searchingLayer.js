@@ -4,7 +4,7 @@ import { store } from "../redux"
 import { actions } from "../redux"
 import { PAGES } from "../pages"
 import { ARRIVED_THRESHOLD } from "../config"
-import Geolocation from "../geolocation/geolocation"
+import { Geolocation } from "../geolocation"
 import "./noteComponent"
 
 class SearchingLayer extends connect(store)(LitElement) {
@@ -32,12 +32,9 @@ class SearchingLayer extends connect(store)(LitElement) {
       Geolocation.intersect(this.lat, this.long, this.handlePositionChange.bind(this))
     }
   }
-
-  createRenderRoot() {
-    return this
-  }
   
   handlePositionChange(newDistance) {
+    console.log("now")
     if (newDistance <= ARRIVED_THRESHOLD) {
       Geolocation.clear()
       this.distanceWatching = false
@@ -52,7 +49,7 @@ class SearchingLayer extends connect(store)(LitElement) {
       ? html`<animated-title>Das Ziel ist noch ${this.currentDistance}m entfernt 🏁</animated-title>` 
       : html`<animated-title>Das funktioniert nur mit aktivierter GPS-Verbindung 😏</animated-title>` 
     }
-      ${this.inClipboard ? html`<note-component>Koordinaten sind in der Zwischenablage!</note-component>` : null}
+      ${this.inClipboard ? html`<note-component>Koordinaten in der Zwischenablage!</note-component>` : null}
     `
   }
 }
