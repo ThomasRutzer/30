@@ -13,7 +13,7 @@ const getDistance = function(lat1, lon1, lat2, lon2) {
   dist = dist * 180 / Math.PI
   dist = dist * 60 * 1.1515
   
-  return dist * 1.609344 * 1000
+  return Math.round(dist * 1.609344 * 1000)
 }
 
 export default getDistance
