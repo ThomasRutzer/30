@@ -7,12 +7,14 @@ import getCSSCustomProp from "./../utils/getCSSCustomProperties"
 import hexToRGB from "./../utils/hexToRGB"
 import "./instructionLayer"
 import "./searchingLayer"
+import "./noteComponent"
 
 class IntroSteps extends connect(store)(LitElement) {
   static get properties() {
     return {
       currentView: { type: String },
-      confetti: { type: Object }
+      confetti: { type: Object },
+      inClipboard: { type: Boolean }
     }
   }
 
@@ -22,6 +24,7 @@ class IntroSteps extends connect(store)(LitElement) {
 
   stateChanged(state) {
     this.currentView = state.currentView
+    this.inClipboard = state.wroteToClipboard
   }
 
   firstUpdated() {
@@ -69,6 +72,7 @@ class IntroSteps extends connect(store)(LitElement) {
         </div>
       </div>
       <canvas id="confettis"></canvas>
+      ${ this.inClipboard ? html`<note-component>Koordinaten in der Zwischenablage!</note-component>` : null}
     `
   }
 }
