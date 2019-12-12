@@ -171,7 +171,7 @@ var he=n(0),pe=function(){return Math.random().toString(36).substring(7).split("
         <a-assets>
           <a-asset-item id="eiffel" src="assets/eiffel_tower.gltf">
         </a-assets>
-        <a-marker type="pattern" url="assets/marker.patt">
+        <a-marker type="pattern" url="assets/marker_30.patt">
           <a-gltf-model scale="0.005 0.005 0.005" src="#eiffel"></a-gltf-model>
         </a-marker>
         <a-entity camera></a-entity>
@@ -202,7 +202,7 @@ var he=n(0),pe=function(){return Math.random().toString(36).substring(7).split("
     `}createRenderRoot(){return this}}customElements.define("searching-layer",$t);customElements.define("note-component",class extends le{static get styles(){return ce`
       .note {
         position: absolute;
-        bottom: 48px;
+        bottom: 36px;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 8px;
