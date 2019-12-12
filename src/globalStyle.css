@@ -2,7 +2,7 @@ body {
   --white: #fff;
   --font: #333;
   --secondary: #d5430b;
-  --primary: #5d48a4;
+  --primary: #5d48a3;
   --info: #FED13B;
 
   color: var(--font);
@@ -23,10 +23,7 @@ body {
 }
 
 .cta {
-  position: absolute;
-  bottom: 48px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 24px;
   border-radius: 8px;
   background-color: var(--secondary);
   border: none;
