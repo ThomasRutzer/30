@@ -3,11 +3,17 @@ import anime from "animejs"
 import Splitting from 'splitting'
 
 class AnimatedTitle extends LitElement {
+  static get properties() {
+    return {
+      content: { type: String }
+    }
+  }
+
   static get styles() {
     return css`
       h1 {
         font-size: 42px;
-        margin-top: 0;
+        margin: 0;
         color: var(--primary);
       }
 
@@ -23,7 +29,7 @@ class AnimatedTitle extends LitElement {
   
   render() {
     return html`
-      <h1>${this.textContent}</h1>
+      <h1>${this.content}</h1>
     `
   }
 
