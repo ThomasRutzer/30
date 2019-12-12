@@ -6,13 +6,8 @@ class ArScene extends LitElement {
   }
 
   createRenderRoot() {
-    /**
-     * Render template without shadow DOM. Note that shadow DOM features like 
-     * encapsulated CSS and slots are unavailable.
-     */
     return this
   }
-
   
   render() {
     return html`
@@ -21,9 +16,9 @@ class ArScene extends LitElement {
         arjs="debugUIEnabled: false" 
         vr-mode-ui="enabled: false">
         <a-assets>
-          <a-asset-item id="eiffel" src="assets/eiffel_tower.gltf">
+          <a-asset-item id="eiffel" material="color: #5d48a3;" src="assets/eiffel_tower.gltf">
         </a-assets>
-        <a-marker type="pattern" url="assets/marker.patt">
+        <a-marker type="pattern" url="assets/marker_30.patt">
           <a-gltf-model scale="0.005 0.005 0.005" src="#eiffel"></a-gltf-model>
         </a-marker>
         <a-entity camera></a-entity>

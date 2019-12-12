@@ -39,11 +39,7 @@ class App extends connect(store)(LitElement) {
   }
 
   defineView() {
-    if (this.currentView == PAGES.ARRIVED) {
-      return html`<ar-scene />`
-    } else {
-      return html`<intro-steps />`
-    }
+    return this.currentView == PAGES.ARRIVED ? html`<ar-scene />` : html`<intro-steps />`
   }
 }
 
