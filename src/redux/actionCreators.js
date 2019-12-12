@@ -27,3 +27,10 @@ export function setClipboard() {
     type: actionTypes.SET_CLIPBOARD
   }
 }
+
+export function setCurrentDistance(distance) {
+  return {
+    type: actionTypes.SET_CURRENT_DISTANCE,
+    distance
+  }
+}

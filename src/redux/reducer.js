@@ -38,6 +38,12 @@ const reducer = (state = initState, action) => {
         wroteToClipboard: true
       }
 
+    case actionTypes.SET_CURRENT_DISTANCE:
+      return {
+        ...state,
+        distance: action.distance
+      }
+
     default:
       return state
   }
