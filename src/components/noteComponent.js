@@ -6,7 +6,7 @@ class Note extends LitElement {
     return css`
       .note {
         position: absolute;
-        bottom: 36px;
+        bottom: 246px;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 8px;
@@ -36,7 +36,7 @@ class Note extends LitElement {
 
     anime({
       targets: note,
-      translateY: [40,0],
+      translateY: [24,0],
       translateX: "-50%",
       opacity: [0,1],
       easing: "easeOutExpo",
