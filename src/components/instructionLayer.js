@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit-element'
 import { connect } from 'pwa-helpers'
 import { actions, store } from "../redux"
 import { setClipboard, updateCurrentView, setCurrentDistance } from "../redux/actionCreators"
-import { PAGES } from "../pages"
+import { PAGES } from "../config"
 import { ARRIVED_THRESHOLD } from "../config"
 import "./animatedTitle"
 import anime from "animejs"

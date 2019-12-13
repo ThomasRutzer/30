@@ -2,7 +2,7 @@ import { LitElement, html } from 'lit-element'
 import { connect } from 'pwa-helpers'
 import ConfettiGenerator from "confetti-js"
 import { store } from "../redux"
-import { PAGES } from "../pages"
+import { PAGES } from "../config"
 import getCSSCustomProp from "./../utils/getCSSCustomProperties"
 import hexToRGB from "./../utils/hexToRGB"
 import "./instructionLayer"

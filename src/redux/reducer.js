@@ -1,5 +1,5 @@
 import * as actionTypes from "./actionTypes"
-import { PAGES} from "./../pages"
+import { PAGES} from "./../config"
 
 const initState = {
   arrived: false,

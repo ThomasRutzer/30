@@ -1,7 +1,7 @@
 import { LitElement, html } from 'lit-element'
 import { connect } from 'pwa-helpers'
 import { store, actions } from "../redux"
-import { PAGES } from "../pages"
+import { PAGES, COORDS } from "../config"
 import "./arScene"
 import "./introSteps"
 
@@ -17,20 +17,15 @@ class App extends connect(store)(LitElement) {
   }
 
   createRenderRoot() {
-    /**
-     * Render template without shadow DOM. Note that shadow DOM features like 
-     * encapsulated CSS and slots are unavailable.
-     */
     return this
   }
 
   constructor() {
     super()
 
-    const queryParams = new URL(window.location.href).searchParams
     store.dispatch(actions.updateCoordinates(
-      queryParams.get("lat"),
-      queryParams.get("long")
+      COORDS.LAT,
+      COORDS.LONG
     ))
   }
   
