@@ -202,7 +202,7 @@ var he=n(0),pe=function(){return Math.random().toString(36).substring(7).split("
     `}createRenderRoot(){return this}}customElements.define("searching-layer",Ht);customElements.define("note-component",class extends le{static get styles(){return ce`
       .note {
         position: absolute;
-        bottom: 246px;
+        bottom: 40px;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 8px;
