@@ -23,7 +23,7 @@ class DistanceInformation extends LitElement {
   }
   
   render() {
-    return html`<h2 class="element">${this.content}</h2>`
+    return html`<h2 class="element">${this.content}m</h2>`
   }
 
   firstUpdated() {
