@@ -174,7 +174,7 @@ var he=n(0),pe=function(){return Math.random().toString(36).substring(7).split("
         </a-assets>
         <a-marker type="pattern" url="assets/marker_30.patt">
           <a-entity 
-          scale="0.005 0.005 0.005" 
+          scale="0.05 0.05 0.05" 
           material="src: assets/eiffel_texture.png" 
           obj-model="obj: #eiffel-obj"></a-entity>
         </a-marker>
