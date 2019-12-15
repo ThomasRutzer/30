@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "webpack-dev-server --env.development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --env.production"
+    "build": "webpack --env.production",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master"
   },
   "author": "",
   "license": "ISC",
@@ -14,6 +15,7 @@
     "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.1",
     "eslint": "^6.7.2",
+    "gh-pages": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^1.0.1",
     "webpack": "^4.41.2",
