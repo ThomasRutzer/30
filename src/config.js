@@ -6,12 +6,12 @@ export const COORDS = {
   // LONG: 10.115766
 
   // OFFICE
-  // LAT: 50.948202, 
-  // LONG: 6.913473
+  LAT: 50.948202, 
+  LONG: 6.913473
 
   // HOUSE
-  LAT: 50.926386, 
-  LONG: 6.945867
+  // LAT: 50.926386, 
+  // LONG: 6.945867
 } 
 
 export const PAGES = {
