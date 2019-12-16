@@ -2,12 +2,13 @@ export const ARRIVED_THRESHOLD = 25
 
 export const COORDS = {
   // ALPS
-  // LAT: 47.468478, 
-  // LONG: 10.115766
+  // LAT: 47.469316,
+  //LONG: 10.115989
 
   // OFFICE
-  LAT: 50.948202, 
-  LONG: 6.913473
+   LAT: 50.948202, 
+   LONG: 6.913473
+ 
 
   // HOUSE
   // LAT: 50.926386, 
