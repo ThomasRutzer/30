@@ -1,15 +1,6 @@
-# WebAR exploration
-
-An location based webAR exploration.
-
-The user is provided with coordinates, which are passed as URL params `lat` and `long`, e.g.:
-
-```
-http://localhost:8080/?lat=40.7142700&long=-74.0059700
-```
-
-When the user arrives within the configurated threshold of this locaction, the WebGL scene is triggered.
-Threshold can be defined in `config.js`
+# Location based webAR gift card
+Guide your presentee person to provided `lat` and `long`. 
+And when she / he arrives, the 3D Model on the marker reveals the present
 
 ## Key technologies
 - [A-Frame](https://aframe.io/)
