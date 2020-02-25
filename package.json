@@ -1,5 +1,5 @@
 {
-  "name": "location-based",
+  "name": "location-based-web-ar-gift-card",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "build": "webpack --env.production",
     "deploy": "gh-pages -d dist -b master"
   },
-  "author": "",
+  "author": "Thomas Rutzer",
   "license": "ISC",
   "devDependencies": {
     "copy-webpack-plugin": "^5.0.5",
