@@ -1,4 +1,4 @@
-# Location based webAR gift card
+# Location based web-ar gift card
 Guide your presentee person to provided `lat` and `long`. 
 And when she / he arrives, the 3D Model on the marker reveals the present
 
